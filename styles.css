@@ -1,0 +1,112 @@
+/* Estilo general para el fondo y el texto del cuerpo */
+body {
+    background-color: #f8f9fa; /* Color de fondo claro */
+    color: #343a40; /* Color del texto oscuro para buen contraste */
+}
+
+/* Estilo para el contenedor principal */
+.container {
+    background: #ffffff; /* Fondo blanco para el contenedor */
+    border-radius: 8px; /* Bordes redondeados para un diseño más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Estilo para el título principal */
+h1 {
+    color: #007bff; /* Color azul para el título principal */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+/* Estilo para el subtítulo */
+h2 {
+    color: #6c757d; /* Color gris para el subtítulo */
+    margin-bottom: 20px; /* Espacio debajo del subtítulo */
+}
+
+/* Estilo para las alertas */
+.alert {
+    margin-top: 20px; /* Espacio encima de la alerta */
+    border-radius: 8px; /* Bordes redondeados para la alerta */
+}
+
+/* Estilo para los campos de formulario */
+.form-control {
+    border-radius: 8px; /* Bordes redondeados para los campos de formulario */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); /* Sombra interna para profundidad */
+}
+
+/* Estilo para el botón primario */
+.btn-primary {
+    background-color: #007bff; /* Color de fondo azul para el botón primario */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados para el botón */
+}
+
+/* Estilo para el botón primario en estado hover */
+.btn-primary:hover {
+    background-color: #0056b3; /* Color de fondo azul más oscuro al pasar el ratón */
+}
+
+/* Estilo para el botón de advertencia */
+.btn-warning {
+    background-color: #ffc107; /* Color de fondo amarillo para el botón de advertencia */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados para el botón */
+}
+
+/* Estilo para el botón de advertencia en estado hover */
+.btn-warning:hover {
+    background-color: #e0a800; /* Color de fondo amarillo más oscuro al pasar el ratón */
+}
+
+/* Estilo para el botón de eliminación */
+.btn-danger {
+    background-color: #dc3545; /* Color de fondo rojo para el botón de eliminación */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados para el botón */
+}
+
+/* Estilo para el botón de eliminación en estado hover */
+.btn-danger:hover {
+    background-color: #c82333; /* Color de fondo rojo más oscuro al pasar el ratón */
+}
+
+/* Estilo para el contenido del modal */
+.modal-content {
+    border-radius: 8px; /* Bordes redondeados para el contenido del modal */
+}
+
+/* Estilo para el encabezado del modal */
+.modal-header {
+    background-color: #007bff; /* Fondo azul para el encabezado del modal */
+    color: white; /* Color del texto blanco para el encabezado */
+    border-bottom: none; /* Sin borde inferior */
+}
+
+/* Estilo para el pie de página del modal */
+.modal-footer {
+    border-top: none; /* Sin borde superior */
+}
+
+/* Estilo para el encabezado de la tabla */
+.table thead th {
+    background-color: #007bff; /* Fondo azul para el encabezado de la tabla */
+    color: white; /* Color del texto blanco para el encabezado */
+    text-align: center; /* Texto centrado en el encabezado */
+}
+
+/* Estilo para las celdas de la tabla */
+.table td {
+    vertical-align: middle; /* Alineación vertical media para el contenido de la celda */
+}
+
+/* Estilo para los botones en la sección de acciones */
+.actions button {
+    margin: 0 5px; /* Espacio horizontal entre botones */
+}
+
+/* Estilo para el botón de cierre de las alertas y modales */
+.btn-close {
+    filter: invert(1); /* Invertir colores del botón de cierre para visibilidad en fondos oscuros */
+}
