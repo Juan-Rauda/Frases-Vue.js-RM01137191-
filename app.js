@@ -126,6 +126,7 @@ const app = createApp({
             alerta
         };
     }
+    
 });
 
 // Montar la aplicación en el elemento con id 'myapp'
