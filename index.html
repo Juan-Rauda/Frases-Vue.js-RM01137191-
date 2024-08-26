@@ -19,11 +19,11 @@
     <div id="myapp" class="container mt-4">
         <!-- Título principal de la aplicación -->
         <h1>Lista de Frases</h1>
-        
+
         <!-- Contador de frases, muestra el número de frases si hay alguna, de lo contrario muestra un mensaje -->
         <h2 v-if="frases.length > 0">Contador de frases: {{ frases.length }}</h2>
         <h2 v-else>Contador de frases: No hay frases registradas.</h2>
-        
+
         <hr />
 
         <!-- Sección para mostrar alertas -->
@@ -101,6 +101,26 @@
                         <button type="button" class="btn btn-primary" @click="guardarEdicion">
                             <i class="fa-solid fa-floppy-disk"></i> Guardar cambios
                         </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de confirmación para eliminar -->
+        <div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalConfirmacionLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalConfirmacionLabel">Confirmar Eliminación</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ¿Estás seguro de que quieres eliminar esta frase?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-danger" @click="confirmarEliminacion">Eliminar</button>
                     </div>
                 </div>
             </div>

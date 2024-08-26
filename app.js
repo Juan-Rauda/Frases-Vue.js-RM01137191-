@@ -15,18 +15,21 @@ const app = createApp({
     setup() {
         // Estado reactivo para las frases
         const frases = ref(frasesEjemplo);
-        console.log("Frases iniciales:", frases.value);
-        
+        // console.log("Frases iniciales:", frases.value);
+
         // Estado reactivo para nueva frase y autor
         const nuevaFrase = ref('');
         const nuevoAutor = ref('');
-        
+
         // Estado reactivo para frase en edición y el índice de edición
         const fraseEdicion = ref(null);
         const indiceEdicion = ref(null);
-        
+
         // Estado reactivo para mostrar alertas
         const alerta = ref(null);
+
+        // Estado reactivo para eliminar una frase
+        const indiceEliminar = ref(null);
 
         // Función para añadir una nueva frase
         const add = () => {
@@ -75,12 +78,25 @@ const app = createApp({
 
         // Función para eliminar una frase
         const eliminar = (index) => {
-            // Confirmar la eliminación
-            if (confirm('¿Estás seguro de que quieres eliminar esta frase?')) {
-                // Eliminar la frase de la lista
-                frases.value.splice(index, 1);
+            // Guardar el índice de la frase que se desea eliminar
+            indiceEliminar.value = index;
+            // Mostrar el modal de confirmación utilizando Bootstrap
+            const modal = new bootstrap.Modal(document.getElementById('modalConfirmacion'));
+            modal.show();
+        };
+
+        // Función para confirmar la eliminación de una frase
+        const confirmarEliminacion = () => {
+            if (indiceEliminar.value !== null) {
+                // Eliminar la frase de la lista utilizando el índice guardado
+                frases.value.splice(indiceEliminar.value, 1);
                 // Mostrar alerta de éxito
                 mostrarAlerta('Frase eliminada con éxito', 'warning');
+                // Reiniciar el índice de eliminación
+                indiceEliminar.value = null;
+                // Ocultar el modal de confirmación
+                const modal = bootstrap.Modal.getInstance(document.getElementById('modalConfirmacion'));
+                modal.hide();
             }
         };
 
@@ -105,6 +121,7 @@ const app = createApp({
             iniciarEdicion,
             guardarEdicion,
             eliminar,
+            confirmarEliminacion,
             mostrarAlerta,
             alerta
         };
